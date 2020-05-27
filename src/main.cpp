@@ -53,7 +53,7 @@ struct cnfg {
 } config;
 
 // camera
-Camera camera(glm::vec3(0.0f, 10.f, 10.0f)*SCALE);
+Camera camera(glm::vec3(-5.f, 5.f, 5.f)*SCALE);
 float lastX = WIDTH / 2.0f;
 float lastY = HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -97,9 +97,9 @@ void addCube(glm::vec3 v1, glm::vec3 v2, glm::vec3 c) {
 void initWorld() {
 
 	// Orbitals
-	//bodies.push_back(Body(glm::vec3(2, -2, 0), glm::vec3(0, 0, 6), 0.1, 0.05));
+	bodies.push_back(Body(glm::vec3(2, -2, 0), glm::vec3(0, 0, 6), 0.1, 0.05));
 	bodies.push_back(Body(glm::vec3(-2, -2, 0), glm::vec3(0, 0, -6), 0.1, 0.05));
-	//bodies.push_back(Body(glm::vec3(0, 2, 2), glm::vec3(6, 0, 0), 0.1, 0.05));
+	bodies.push_back(Body(glm::vec3(0, 2, 2), glm::vec3(6, 0, 0), 0.1, 0.05));
 	bodies.push_back(Body(glm::vec3(0, 2, -2), glm::vec3(-6, 0, 0), 0.1, 0.05));
 
 	// Sun
